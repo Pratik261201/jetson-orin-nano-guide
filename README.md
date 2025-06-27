@@ -74,7 +74,7 @@ You will need a computer with internet access and an SD card reader (either buil
 
 Use SD Memory Card Formatter from the SD Association.  
 
-!\[Image](https://raw.githubusercontent.com/your-username/your-repo/main/photos/Jetson\_Nano-Getting\_Started-Windows-SD\_Card\_Formatter.png)
+!\[Image](https://github.com/Pratik261201/jetson-orin-nano-guide/blob/main/photos/Jetson\_Nano-Getting\_Started-Windows-SD\_Card\_Formatter.png)
 
 Download, install, and launch the formatter from \[this link](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/).
 

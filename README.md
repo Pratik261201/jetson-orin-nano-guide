@@ -2,11 +2,11 @@
 
 
 
-Welcome to this repository — a \*\*complete, step-by-step guide\*\* designed to help you set up and deploy \*\*AI/ML, computer vision, and edge computing applications\*\* on the \*\*NVIDIA Jetson Orin Nano\*\*.
+This repository serves as a \*\*complete step-by-step guide\*\* for setting up and deploying \*\*AI/ML, computer vision, and edge computing applications\*\* on the \*\*NVIDIA Jetson Orin Nano\*\*.
 
 
 
-Whether you're a beginner or an experienced developer working with \*\*DeepStream\*\*, \*\*Holoscan\*\*, \*\*GXF\*\*, or \*\*Rivermax\*\*, this guide provides everything you need — from recommended hardware and purchase links to advanced performance optimization tips.
+Whether you're a beginner or an experienced developer working with \*\*DeepStream\*\*, \*\*Holoscan\*\*, \*\*GXF\*\*, or \*\*Rivermax\*\*, this guide equips you with everything you need — from hardware recommendations and purchase links to performance tuning for your AI applications.
 
 
 
@@ -22,27 +22,25 @@ Whether you're a beginner or an experienced developer working with \*\*DeepStrea
 
 
 
-To begin working with the Jetson Orin Nano, the following components are required:
+To get started with the Jetson Orin Nano, the following components are required:
 
 
 
 \#### 🧩 Essential Components:
 
+| Item | Recommendation | Link |
 
+|------|----------------|------|
 
-| Item                                       | Recommendation                    | Link                                                                                                                                                                                                                                                                                                                                                    |
+| ✅ Jetson Orin Nano Dev Kit | 8GB version recommended | \[Buy from NVIDIA Store](https://developer.nvidia.com/embedded/jetson-orin-nano-devkit) / \[ThinkRobotics](https://thinkrobotics.com/collections/buy-nvidia-jetson-developer-kits-online) |
 
-| ------------------------------------------ | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ✅ microSD Card | 64GB UHS-I U3 or higher | \[SanDisk Extreme/Ultra recommended](http://www.flipkart.com/sandisk-sdsquab-064g-gn6mn-ultra-64-gb-microsdxc-class-10-140-mb-s-memory-card-compatible-camera-computer-gaming-console-mobile-tablet/p/itm13f1b960bbb9d) |
 
-| ✅ Jetson Orin Nano Dev Kit                 | 8GB version recommended           | \[Buy from NVIDIA Store](https://developer.nvidia.com/embedded/jetson-orin-nano-devkit) or \[ThinkRobotics](https://thinkrobotics.com/collections/buy-nvidia-jetson-developer-kits-online)                                                                                                                                                                |
+| ✅ NVMe SSD \*(Optional but Recommended)\* | 256GB–1TB M.2 NVMe (PCIe Gen3 x4) | WD SN350 or WD SN570 |
 
-| ✅ microSD Card                             | 64GB UHS-I U3 or higher           | SanDisk Extreme/Ultra recommended (\[Flipkart Link](http://www.flipkart.com/sandisk-sdsquab-064g-gn6mn-ultra-64-gb-microsdxc-class-10-140-mb-s-memory-card-compatible-camera-computer-gaming-console-mobile-tablet/p/itm13f1b960bbb9d?pid=ACCGGX76TNFCNDMA\&lid=LSTACCGGX76TNFCNDMAIBPHB3\&marketplace=FLIPKART\&cmpid=content\_memory-card\_8965229628\_gmc)) |
+| ✅ DP (DisplayPort) to HDMI Converter |
 
-| ✅ NVMe SSD \*(Optional but Recommended)\*    | 256GB–1TB M.2 NVMe (PCIe Gen3 x4) | WD SN350 or WD SN570                                                                                                                                                                                                                                                                                                                                    |
-
-| ✅ DisplayPort to HDMI Adapter              |                                   |                                                                                                                                                                                                                                                                                                                                                         |
-
-| ✅ USB Keyboard, Mouse, Monitor, HDMI Cable | Required for initial setup        |                                                                                                                                                                                                                                                                                                                                                         |
+| ✅ USB Keyboard, Mouse, Monitor, HDMI Cable | Required for initial setup |
 
 
 
@@ -54,71 +52,19 @@ To begin working with the Jetson Orin Nano, the following components are require
 
 
 
-1\. \*\*Download the OS Image (JetPack 6.2 or 6.x)\*\*
+1\. \*\*Download the OS Image (JetPack 6.2 or 6.x)\*\*  
 
-&nbsp;  Get it from this link:
-
-&nbsp;  \[Jetson JetPack OS Image](https://developer.nvidia.com/downloads/embedded/L4T/r36\_Release\_v4.4/jp62-r1-orin-nano-sd-card-image.zip)
+&nbsp;  \[Download JetPack Image](https://developer.nvidia.com/downloads/embedded/L4T/r36\_Release\_v4.4/jp62-r1-orin-nano-sd-card-image.zip)
 
 
 
-2\. \*\*Write the Image to microSD Card\*\*
+2\. \*\*Write the Image to microSD Card\*\*  
 
-&nbsp;  You'll need a Windows PC with internet access and an SD card reader (built-in or via USB).
-
-
-
-\#### Step-by-step Instructions:
+&nbsp;  You will need a Windows computer with an internet connection and an SD card reader (built-in or via USB).
 
 
 
-\*\*A. Format the microSD Card\*\*
-
-Use \[SD Memory Card Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/) by the SD Association.
-
-!\[Formatter](photos/Jetson\_Nano-Getting\_Started-Windows-SD\_Card\_Formatter.png)
-
-
-
-\* Launch the tool.
-
-\* Select the appropriate drive.
-
-\* Choose “Quick format.”
-
-\* Leave the “Volume label” field blank.
-
-\* Click “Format,” and confirm by clicking “Yes” on the warning dialog.
-
-
-
-\*\*B. Flash the Image Using Balena Etcher\*\*
-
-Download \[Balena Etcher](https://etcher.balena.io/) and install it.
-
-!\[Etcher Launch](photos/Jetson\_Nano-Getting\_Started-Windows-Etcher.png)
-
-
-
-\* Open Etcher.
-
-\* Click \*\*“Select Image”\*\* and choose the downloaded ZIP file.
-
-\* Insert the microSD card.
-
-\* Click \*\*“Select Drive”\*\* and choose the correct card reader.
-
-&nbsp; !\[Select Drive](photos/Jetson\_Nano-Getting\_Started-Windows-Etcher\_Select\_Drive.png)
-
-\* Click \*\*“Flash!”\*\*
-
-&nbsp; The flashing and validation process may take \\~15 minutes, especially over USB 3.0.
-
-
-
-After completion, Windows may display a prompt saying it cannot read the SD card. This is expected — simply click \*\*Cancel\*\* and safely eject the card.
-
-!\[SD Card Prompt](photos/Jetson\_Nano-Getting\_Started-Windows-SD\_Card\_Prompt.png)
+\#### Step-by-Step Instructions:
 
 
 
@@ -126,7 +72,67 @@ After completion, Windows may display a prompt saying it cannot read the SD card
 
 
 
-Let me know if you’d like this version exported as a `.md` file or need help writing sections for DeepStream, Holoscan, or performance tuning!
+\*\*A. Format the microSD Card\*\*  
+
+Use the official \[SD Memory Card Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/).
+
+
+
+!\[SD Card Formatter](photos/Jetson\_Nano-Getting\_Started-Windows-SD\_Card\_Formatter.png)
+
+
+
+\- Launch the tool.
+
+\- Select the correct SD card drive.
+
+\- Choose \*\*Quick format\*\*.
+
+\- Leave the \*\*Volume label\*\* field blank.
+
+\- Click \*\*Format\*\*, then confirm by clicking \*\*Yes\*\* on the warning prompt.
+
+
+
+---
+
+
+
+\*\*B. Flash the OS Image Using Balena Etcher\*\*  
+
+Download and install \[Balena Etcher](https://etcher.balena.io/).
+
+
+
+!\[Etcher - Launch](photos/Jetson\_Nano-Getting\_Started-Windows-Etcher.png)
+
+
+
+\- Open Etcher.
+
+\- Click \*\*“Select Image”\*\* and choose the downloaded zipped image file.
+
+\- Insert your microSD card.
+
+\- Click \*\*“Select Drive”\*\* and choose the appropriate device.
+
+
+
+!\[Etcher - Select Drive](photos/Jetson\_Nano-Getting\_Started-Windows-Etcher\_Select\_Drive.png)
+
+
+
+\- Click \*\*“Flash!”\*\*  
+
+&nbsp; Flashing and validation may take approximately 15 minutes over USB 3.0.
+
+
+
+Once completed, Windows may display a prompt indicating it cannot read the SD card. This is expected. Simply click \*\*Cancel\*\* and safely remove the microSD card.
+
+
+
+!\[Windows SD Card Prompt](photos/Jetson\_Nano-Getting\_Started-Windows-SD\_Card\_Prompt.png)
 
 
 

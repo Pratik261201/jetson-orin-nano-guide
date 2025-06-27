@@ -58,14 +58,74 @@ Download, install, and launch Balena Etcher from [this link](https://etcher.bale
 After flashing, Windows may report that it cannot read the SD card. This is expected — click “Cancel” and remove the microSD card.  
 ![My Image](photos/Jetson_Nano-Getting_Started-Windows-SD_Card_Prompt.png)
 
+## ⚙️ Setup and First Boot
 
+Once your microSD card is ready, proceed with setting up the Jetson Orin Nano Developer Kit.
 
-- Flash OS to NVMe SSD directly **without host PC** using:
-  - `l4t_initrd_flash.sh`
-  - Jetson’s own U-Boot & USB storage
-- Optional: Create headless setup using **SSH**, **VNC**
+### 🧾 Setup Steps
+
+1. Insert the microSD card (with the flashed system image) into the slot located on the underside of the Jetson Orin Nano module.
+2. Power on your monitor or display and connect it to the developer kit.
+3. Connect the USB keyboard and mouse.
+4. Plug in the power supply provided with the kit.  
+   The Jetson Orin Nano Developer Kit will automatically power on and begin the boot process.
+
+![My Image](photos/jetson-orin-nano-dev-kit-sd-slot.jpg)
 
 ---
+
+### 🚀 First Boot
+
+A green LED near the USB-C connector will light up once the board powers on. During the first boot, you will be guided through the initial configuration steps:
+
+- Review and accept the NVIDIA Jetson Software EULA.
+- Select your preferred system language, keyboard layout, and time zone.
+- Connect to a Wi-Fi network.
+- Create a username, password, and hostname.
+- Log in to your new Jetson environment.
+
+---
+
+### 🖥️ After Logging In
+
+Once logged in, you’ll see the following screen — congratulations on setting up your Jetson Orin Nano!
+
+![My Image](photos/Getting_started-Jetson_Xavier_NX-screenshot.png)
+
+---
+
+### 💽 Optional: Flash OS Directly to NVMe SSD (No Host PC Required)
+
+You can flash the OS directly to your NVMe SSD without needing a separate host machine by using Jetson's built-in U-Boot and USB boot functionality.
+
+Use the following script:
+- `l4t_initrd_flash.sh`
+
+This method leverages the Jetson device’s own U-Boot and USB storage to perform the operation.
+
+---
+
+### 💻 Optional: Headless Setup
+
+For remote setup and control without a connected display or keyboard/mouse:
+
+- Use **SSH** for terminal-based remote access.
+- Use **VNC** for full desktop environment over the network.
+
+---
+
+## 🚀 Unlocking Super Performance Mode
+
+The default power mode of Jetson Orin Nano is set to **25W**. To unlock the full hardware potential, you can switch to the **MAXN SUPER** mode.
+
+### 🔋 Steps to Enable MAXN SUPER Mode
+
+1. On the Ubuntu desktop, locate the **NVIDIA icon** on the top-right panel.
+2. Click on the icon to open the **Power Mode** menu.
+3. From the options, select **MAXN SUPER** to activate maximum performance mode.
+
+![My Image](photos/jons_power-mode-to-maxn-super.png)
+
 
 ### ⚙️ 3. CUDA, cuDNN, TensorRT Setup
 - Enable and verify **CUDA acceleration**

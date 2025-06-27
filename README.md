@@ -1,12 +1,12 @@
-\# 🧠 Jetson Orin Nano - Comprehensive Setup \& AI Deployment Guide 🚀
+\# 🧠 Jetson Orin Nano - Complete Setup \& AI Deployment Guide 🚀
 
 
 
-This repository serves as a \*\*complete step-by-step guide\*\* for setting up and deploying \*\*AI/ML, computer vision, and edge computing applications\*\* on the \*\*NVIDIA Jetson Orin Nano\*\*.
+This repository provides a \*\*complete step-by-step guide\*\* for setting up and deploying \*\*AI/ML, vision, and edge computing applications\*\* on the \*\*NVIDIA Jetson Orin Nano\*\*.
 
 
 
-Whether you're a beginner or an experienced developer working with \*\*DeepStream\*\*, \*\*Holoscan\*\*, \*\*GXF\*\*, or \*\*Rivermax\*\*, this guide equips you with everything you need — from hardware recommendations and purchase links to performance tuning for your AI applications.
+Whether you're a beginner or a developer deploying advanced models using \*\*DeepStream\*\*, \*\*Holoscan\*\*, \*\*GXF\*\*, or \*\*Rivermax\*\*, this repository offers everything — from hardware purchase links to software performance optimization.
 
 
 
@@ -14,7 +14,7 @@ Whether you're a beginner or an experienced developer working with \*\*DeepStrea
 
 
 
-\## 🔧 What's Included?
+\## 🔧 What's Covered?
 
 
 
@@ -22,49 +22,25 @@ Whether you're a beginner or an experienced developer working with \*\*DeepStrea
 
 
 
-To get started with the Jetson Orin Nano, the following components are required:
+To begin working with Jetson Orin Nano, you’ll need the following:
 
 
 
-\#### 🧩 Essential Components:
+\#### 🧩 Required Components:
 
 | Item | Recommendation | Link |
 
 |------|----------------|------|
 
-| ✅ Jetson Orin Nano Dev Kit | 8GB version recommended | \[Buy from NVIDIA Store](https://developer.nvidia.com/embedded/jetson-orin-nano-devkit) / \[ThinkRobotics](https://thinkrobotics.com/collections/buy-nvidia-jetson-developer-kits-online) |
+| ✅ Jetson Orin Nano Dev Kit | 8GB version recommended | \[Buy from NVIDIA Store](https://developer.nvidia.com/embedded/jetson-orin-nano-devkit) or \[ThinkRobotics](https://thinkrobotics.com/collections/buy-nvidia-jetson-developer-kits-online) |
 
-| ✅ microSD Card | 64GB UHS-I U3 or higher | \[SanDisk Extreme/Ultra recommended](http://www.flipkart.com/sandisk-sdsquab-064g-gn6mn-ultra-64-gb-microsdxc-class-10-140-mb-s-memory-card-compatible-camera-computer-gaming-console-mobile-tablet/p/itm13f1b960bbb9d) |
+| ✅ microSD Card | 64GB UHS-I U3 or higher | \[SanDisk Extreme/Ultra recommended](http://www.flipkart.com/sandisk-sdsquab-064g-gn6mn-ultra-64-gb-microsdxc-class-10-140-mb-s-memory-card-compatible-camera-computer-gaming-console-mobile-tablet/p/itm13f1b960bbb9d?pid=ACCGGX76TNFCNDMA\&lid=LSTACCGGX76TNFCNDMAIBPHB3\&marketplace=FLIPKART\&cmpid=content\_memory-card\_8965229628\_gmc) |
 
-| ✅ NVMe SSD \*(Optional but Recommended)\* | 256GB–1TB M.2 NVMe (PCIe Gen3 x4) | WD SN350 or WD SN570 |
+| ✅ NVMe SSD (Optional but better) | 256GB–1TB M.2 NVMe (PCIe Gen3 x4) | WD SN350 or WD SN570 |
 
-| ✅ DP (DisplayPort) to HDMI Converter |
+| ✅ DP (Display Port) to HDMI Converter |
 
-| ✅ USB Keyboard, Mouse, Monitor, HDMI Cable | Required for initial setup |
-
-
-
----
-
-
-
-\### 🖥️ 2. Flashing Jetson OS for Initial Boot (Windows Machine Required)
-
-
-
-1\. \*\*Download the OS Image (JetPack 6.2 or 6.x)\*\*  
-
-&nbsp;  \[Download JetPack Image](https://developer.nvidia.com/downloads/embedded/L4T/r36\_Release\_v4.4/jp62-r1-orin-nano-sd-card-image.zip)
-
-
-
-2\. \*\*Write the Image to microSD Card\*\*  
-
-&nbsp;  You will need a Windows computer with an internet connection and an SD card reader (built-in or via USB).
-
-
-
-\#### Step-by-Step Instructions:
+| ✅ USB Keyboard, Mouse, Monitor, HDMI Cable | For initial setup |
 
 
 
@@ -72,67 +48,73 @@ To get started with the Jetson Orin Nano, the following components are required:
 
 
 
-\*\*A. Format the microSD Card\*\*  
-
-Use the official \[SD Memory Card Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/).
+\### 🖥️ 2. Flashing Jetson OS for First Time Boot (Requires Windows Machine)
 
 
 
-!\[SD Card Formatter](photos/Jetson\_Nano-Getting\_Started-Windows-SD\_Card\_Formatter.png)
+\- First, download the JetPack 6.2 or 6.x OS image from \[this link](https://developer.nvidia.com/downloads/embedded/L4T/r36\_Release\_v4.4/jp62-r1-orin-nano-sd-card-image.zip).
+
+\- Then follow the steps below to write the image to a microSD card.
 
 
 
-\- Launch the tool.
-
-\- Select the correct SD card drive.
-
-\- Choose \*\*Quick format\*\*.
-
-\- Leave the \*\*Volume label\*\* field blank.
-
-\- Click \*\*Format\*\*, then confirm by clicking \*\*Yes\*\* on the warning prompt.
+\#### Writing the Image to the microSD Card
 
 
 
----
+You will need a computer with internet access and an SD card reader (either built-in or via adapter).
 
 
 
-\*\*B. Flash the OS Image Using Balena Etcher\*\*  
-
-Download and install \[Balena Etcher](https://etcher.balena.io/).
+\##### Instructions for Windows:
 
 
 
-!\[Etcher - Launch](photos/Jetson\_Nano-Getting\_Started-Windows-Etcher.png)
+\*\*Step 1: Format the microSD Card\*\*  
+
+Use SD Memory Card Formatter from the SD Association.  
+
+!\[My Image](photos/Jetson\_Nano-Getting\_Started-Windows-SD\_Card\_Formatter.png)  
+
+Download, install, and launch the formatter from \[this link](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/).
 
 
 
-\- Open Etcher.
+\- Select the card drive.
 
-\- Click \*\*“Select Image”\*\* and choose the downloaded zipped image file.
+\- Choose “Quick format”.
 
-\- Insert your microSD card.
+\- Leave “Volume label” blank.
 
-\- Click \*\*“Select Drive”\*\* and choose the appropriate device.
+\- Click “Format” to start formatting.
 
-
-
-!\[Etcher - Select Drive](photos/Jetson\_Nano-Getting\_Started-Windows-Etcher\_Select\_Drive.png)
+\- Click “Yes” on the warning dialog.
 
 
 
-\- Click \*\*“Flash!”\*\*  
+\*\*Step 2: Flash the Image Using Etcher\*\*  
 
-&nbsp; Flashing and validation may take approximately 15 minutes over USB 3.0.
+Download, install, and launch Balena Etcher from \[this link](https://etcher.balena.io/).  
 
-
-
-Once completed, Windows may display a prompt indicating it cannot read the SD card. This is expected. Simply click \*\*Cancel\*\* and safely remove the microSD card.
+!\[My Image](photos/Jetson\_Nano-Getting\_Started-Windows-Etcher.png)
 
 
 
-!\[Windows SD Card Prompt](photos/Jetson\_Nano-Getting\_Started-Windows-SD\_Card\_Prompt.png)
+\- Click “Select image” and choose the zipped image file you downloaded earlier.
+
+\- Insert your microSD card (if not already inserted).
+
+\- Click “Select drive” and choose the correct device.  
+
+&nbsp; !\[My Image](photos/Jetson\_Nano-Getting\_Started-Windows-Etcher\_Select\_Drive.png)
+
+\- Click “Flash!”. It will take around 15 minutes to write and validate the image if the card is connected via USB 3.
+
+
+
+After flashing, Windows may report that it cannot read the SD card. This is expected — click “Cancel” and remove the microSD card.  
+
+!\[My Image](photos/Jetson\_Nano-Getting\_Started-Windows-SD\_Card\_Prompt.png)
 
 
 

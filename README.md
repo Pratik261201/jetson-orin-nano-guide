@@ -260,6 +260,18 @@ jetson-orin-nano-complete-guide/
 
 If you've built tools, fixed bugs, or optimized workflows for Jetson Orin Nano — feel free to open a PR!
 
+<!-- Image References -->
+
+\[photos/formatter]: ./photos/Jetson\_Nano-Getting\_Started-Windows-SD\_Card\_Formatter.png
+
+\[photos/etcher]: ./photos/Jetson\_Nano-Getting\_Started-Windows-Etcher.png
+
+\[photos/select-drive]: ./photos/Jetson\_Nano-Getting\_Started-Windows-Etcher\_Select\_Drive.png
+
+\[photos/prompt]: ./photos/Jetson\_Nano-Getting\_Started-Windows-SD\_Card\_Prompt.png
+
+
+
 
 
 

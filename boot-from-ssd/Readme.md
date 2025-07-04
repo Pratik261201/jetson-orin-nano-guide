@@ -38,12 +38,16 @@ Run `make_partitions.sh` to copy the partition structure:
 ```bash
 sudo bash make_partitions.sh
 ```
-### Step 2: Copy Partition Data
+### Step 2: Check the Partition Structure
+
+Open the **Disks** application from the **Applications** menu. Review the partition layout—if there is any **unallocated space**, merge it with the main partition manually if it hasn’t been merged automatically.
+
+### Step 3: Copy Partition Data
 Run `copy_partitions.sh` to clone the data:
 ```bash
 sudo  bash copy_partitions.sh 
 ```
-### Step 3: Configure SSD Boot
+### Step 4: Configure SSD Boot
 Run `configure_ssd_boot.sh` to modify the system configuration:
 ```bash
 sudo bash configure_ssd_boot.sh 
@@ -53,12 +57,3 @@ sudo bash configure_ssd_boot.sh
 - Ensure the SSD has a larger capacity than the SD card.
 - Back up your data before running the scripts.
 - After completing all steps, reboot the Jetson Developer Kit to verify that it boots from the SSD. (You may have to change the boot order in the UEFI boot sequence).
-
-## Release
-### Initial Release
-- December, 2024
-- Tested on Jetson Orin Nano Super
-
-
-## License
-This project is licensed under the MIT License.

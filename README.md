@@ -93,14 +93,20 @@ Once logged in, you’ll see the following screen — congratulations on setting
 ![My Image](photos/Getting_started-Jetson_Xavier_NX-screenshot.png)
 
 ---
+Sure! Here's the rephrased version:
 
-### 💽 Flash OS Directly to NVMe SSD (No Host PC Required)
-NVMe SSD : required WD SN350 or WD SN570
+---
 
-You can flash the OS directly to your NVMe SSD without needing a separate host machine by using Jetson's built-in U-Boot and USB boot functionality.
-reach to folder : in this same GitHub repo folder name: migrate-jetson-to-ssd
+### 💽 Flash the OS Directly to NVMe SSD (No Host PC Needed)
 
-This method leverages the Jetson device’s own U-Boot and USB storage to perform the operation.
+**Supported NVMe SSDs**: WD SN350 or WD SN570 recommended
+
+You can install the operating system directly onto your NVMe SSD using the Jetson device itself—no separate host computer is required. This process utilizes Jetson’s built-in **U-Boot** and **USB boot** capabilities.
+
+Navigate to the following directory within this GitHub repository:
+📁 `boot-from-ssd`
+
+This approach makes use of the Jetson’s native tools to flash the OS directly via USB and U-Boot.
 
 ---
 

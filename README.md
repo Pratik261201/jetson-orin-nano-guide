@@ -94,12 +94,11 @@ Once logged in, you’ll see the following screen — congratulations on setting
 
 ---
 
-### 💽 Optional: Flash OS Directly to NVMe SSD (No Host PC Required)
+### 💽 Flash OS Directly to NVMe SSD (No Host PC Required)
+NVMe SSD : required WD SN350 or WD SN570
 
 You can flash the OS directly to your NVMe SSD without needing a separate host machine by using Jetson's built-in U-Boot and USB boot functionality.
-
-Use the following script:
-- `l4t_initrd_flash.sh`
+reach to folder : in this same GitHub repo folder name: migrate-jetson-to-ssd
 
 This method leverages the Jetson device’s own U-Boot and USB storage to perform the operation.
 
@@ -118,6 +117,8 @@ For remote setup and control without a connected display or keyboard/mouse:
 
 The default power mode of Jetson Orin Nano is set to **25W**. To unlock the full hardware potential, you can switch to the **MAXN SUPER** mode.
 
+bash```
+sudo jetson_clocks
 ### 🔋 Steps to Enable MAXN SUPER Mode
 
 1. On the Ubuntu desktop, locate the **NVIDIA icon** on the top-right panel.
@@ -149,15 +150,6 @@ The default power mode of Jetson Orin Nano is set to **25W**. To unlock the full
 - 🔹 **Holoscan SDK** – edge medical/robotics compute
 - 🔹 **GXF** – Graph eXecution Framework (Holoscan backend)
 - 🔹 **Rivermax SDK** – high-speed video over 25/100 GbE
-
----
-
-### 📊 6. Benchmarks & Examples
-- OMP (Orthogonal Matching Pursuit) – CPU vs. GPU
-- TorchScript inference times and comparison
-- GPU temperature, frequency, and memory profiling
-- Monitoring tools: `tegrastats`, `jtop`
-
 ---
 
 ## 📁 Folder Structure
@@ -171,6 +163,8 @@ jetson-orin-nano-complete-guide/
 ├── holoscan/                  # Medical/Edge pipeline examples
 ├── torchscript/               # Model inference & profiling
 ├── benchmarks/                # Performance logs and graphs
+├── migrate-jetson-to-ssd/     # To Boot OS from SSD
+├── JetsonChat/                # Offline AI CHATBOT to TEST GPU performance 
 ├── requirements.txt
 └── README.md
 
